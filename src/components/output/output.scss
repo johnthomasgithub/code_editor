@@ -1,0 +1,20 @@
+.output-parent {
+  height: -webkit-fill-available;
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  .output-head {
+    position: absolute;
+    color: #ffffff;
+    font-weight: 700;
+    top: -28px;
+  }
+  .output-section {
+    background-color: #ffffff;
+    padding: 15px;
+    height: -webkit-fill-available;
+    border-radius: 3px;
+    color: black;
+  }
+}

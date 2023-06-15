@@ -1,0 +1,18 @@
+.tabs-parent {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 15px;
+  .tab {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+    padding: 5px 5px 0px 5px;
+    cursor: pointer;
+    &.highlight {
+      border-bottom: 5px solid #de257a;
+      border-radius: 2px;
+      background-color: #4e4e4e;
+    }
+  }
+}

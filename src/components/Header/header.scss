@@ -1,0 +1,17 @@
+.header-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 15px;
+
+  .logo-parent {
+    display: flex;
+    color: #ffffff;
+    flex-direction: column;
+    gap: 5px;
+    align-items: center;
+    font-weight: 700;
+    .logo-img {
+    }
+  }
+}

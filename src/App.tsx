@@ -1,7 +1,10 @@
+import { Landing } from './pages/Landing'
+import './styles/globalstyle.scss'
+
 export const App = () => {
   return (
-    <>
-      <h1>React TypeScript Webpack Starter Template</h1>
-    </>
+    <div className="app-parent">
+      <Landing />
+    </div>
   )
 }
