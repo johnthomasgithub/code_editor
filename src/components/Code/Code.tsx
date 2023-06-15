@@ -56,7 +56,7 @@ const Code = (props: Props) => {
         onChange={(ev) => {
           props.storeCode(ev.target.value)
         }}
-      />
+      ></textarea>
     </>
   )
 }

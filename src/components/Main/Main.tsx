@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import Tabs from '../Tabs/Tabs'
 import { HtmlLogo, CssLogo, JsLogo } from '../../utils/Icons'
@@ -8,13 +8,18 @@ const Main = () => {
   const [htmlContainer, setHtmlContainer] = useState('')
   const [cssContainer, setCssContainer] = useState('')
   const [jsContainer, setJsContainer] = useState('')
+  const [selectedTab, setSelectedTab] = useState('HTML')
 
   const tabs = [
     { name: 'HTML', color: '', logo: <HtmlLogo width="15" height="15" /> },
     { name: 'CSS', color: '', logo: <CssLogo width="15" height="15" /> },
     { name: 'JS', color: '', logo: <JsLogo width="15" height="15" /> },
   ]
-  const [selectedTab, setSelectedTab] = useState('HTML')
+
+  useEffect(() => {
+    console.log('code change')
+  }, [htmlContainer, cssContainer, jsContainer])
+
   return (
     <div className="main-parent">
       <Tabs
