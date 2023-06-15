@@ -1,7 +1,5 @@
 import ReactDOM from 'react-dom'
 import { App } from './App'
-
-// import  store  from 'react-redux';
 import { Provider } from 'react-redux'
 import Store from './Redux/Store'
 ReactDOM.render(

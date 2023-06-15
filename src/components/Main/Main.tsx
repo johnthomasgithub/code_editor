@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
-
+import { useSelector, useDispatch } from 'react-redux'
 import Tabs from '../Tabs/Tabs'
+import { toggleLoader } from '../../Redux/Reducer/Reducers'
 import { HtmlLogo, CssLogo, JsLogo } from '../../utils/Icons'
 import Output from '../output/Output'
 import Code from '../Code/Code'
@@ -9,6 +10,8 @@ const Main = () => {
   const [cssContainer, setCssContainer] = useState('')
   const [jsContainer, setJsContainer] = useState('')
   const [selectedTab, setSelectedTab] = useState('HTML')
+  const dispatch = useDispatch()
+  const apiLoader = useSelector((state: any) => state.apiLoader.loader)
 
   const tabs = [
     { name: 'HTML', color: '', logo: <HtmlLogo width="15" height="15" /> },
@@ -17,7 +20,10 @@ const Main = () => {
   ]
 
   useEffect(() => {
-    console.log('code change')
+    dispatch(toggleLoader(true))
+    setTimeout(() => {
+      dispatch(toggleLoader(false))
+    }, 3000)
   }, [htmlContainer, cssContainer, jsContainer])
 
   return (
