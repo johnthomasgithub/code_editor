@@ -1,3 +1,4 @@
+import Loader from './components/Loader/Loader'
 import { Landing } from './pages/Landing'
 import './styles/globalstyle.scss'
 

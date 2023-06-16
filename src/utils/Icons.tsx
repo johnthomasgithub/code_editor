@@ -67,6 +67,7 @@ export const JsLogo = (props: Props) => {
       viewBox="0 0 124 141.53199999999998"
       style={props.style}
       className={props.className}
+      onClick={props.onClick}
     >
       <path
         d="M10.383 126.894L0 0l124 .255-10.979 126.639-50.553 14.638z"
@@ -78,6 +79,64 @@ export const JsLogo = (props: Props) => {
       />
       <g fill="#fff">
         <path d="M57 26H43.5v78L33 102V91.5l-12.5-2V113l36.5 9.5zM67.127 26H104.5L102 40.95H81.394v24.533H102L99.5 115l-32.373 7.5V107L89 99.5 90.263 79l-23.136 3.35z" />
+      </g>
+    </svg>
+  )
+}
+
+export const Minimize = (props: Props) => {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="#ffffff"
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <path
+          fill="#ffffff"
+          fillRule="evenodd"
+          d="M11 8a1 1 0 001 1h6a1 1 0 100-2h-3.586l3.793-3.793a1 1 0 00-1.414-1.414L13 5.586V2a1 1 0 10-2 0v6zm-2 4a1 1 0 00-1-1H2a1 1 0 100 2h3.586l-3.793 3.793a1 1 0 101.414 1.414L7 14.414V18a1 1 0 102 0v-6z"
+        ></path>{' '}
+      </g>
+    </svg>
+  )
+}
+
+export const Maximize = (props: Props) => {
+  return (
+    <svg
+      viewBox="0 0 20 20"
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      stroke="#ffffff"
+      style={props.style}
+      className={props.className}
+      onClick={props.onClick}
+    >
+      <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
+      <g
+        id="SVGRepo_tracerCarrier"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+      ></g>
+      <g id="SVGRepo_iconCarrier">
+        {' '}
+        <path
+          fill="#ffffff"
+          fillRule="evenodd"
+          d="M19 2a1 1 0 00-1-1h-6a1 1 0 100 2h3.586l-3.793 3.793a1 1 0 001.414 1.414L17 4.414V8a1 1 0 102 0V2zM1 18a1 1 0 001 1h6a1 1 0 100-2H4.414l3.793-3.793a1 1 0 10-1.414-1.414L3 15.586V12a1 1 0 10-2 0v6z"
+        ></path>{' '}
       </g>
     </svg>
   )

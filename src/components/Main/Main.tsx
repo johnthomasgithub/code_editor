@@ -10,6 +10,7 @@ const Main = () => {
   const [cssContainer, setCssContainer] = useState('')
   const [jsContainer, setJsContainer] = useState('')
   const [selectedTab, setSelectedTab] = useState('HTML')
+  const [minMax, setMinMax] = useState(false)
   const dispatch = useDispatch()
   const apiLoader = useSelector((state: any) => state.apiLoader.loader)
 
@@ -34,18 +35,26 @@ const Main = () => {
         selectedTab={selectedTab}
       />
       <div className="main-content">
-        <div className="code-section">
-          {selectedTab === 'HTML' && (
-            <Code storedCode={htmlContainer} storeCode={setHtmlContainer} />
-          )}
-          {selectedTab === 'CSS' && (
-            <Code storedCode={cssContainer} storeCode={setCssContainer} />
-          )}
-          {selectedTab === 'JS' && (
-            <Code storedCode={jsContainer} storeCode={setJsContainer} />
-          )}
-        </div>
-        <Output html={htmlContainer} css={cssContainer} js={jsContainer} />
+        {!minMax && (
+          <div className="code-section">
+            {selectedTab === 'HTML' && (
+              <Code storedCode={htmlContainer} storeCode={setHtmlContainer} />
+            )}
+            {selectedTab === 'CSS' && (
+              <Code storedCode={cssContainer} storeCode={setCssContainer} />
+            )}
+            {selectedTab === 'JS' && (
+              <Code storedCode={jsContainer} storeCode={setJsContainer} />
+            )}
+          </div>
+        )}
+        <Output
+          minMax={minMax}
+          maximize={setMinMax}
+          html={htmlContainer}
+          css={cssContainer}
+          js={jsContainer}
+        />
       </div>
     </div>
   )

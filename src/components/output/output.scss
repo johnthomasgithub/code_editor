@@ -5,10 +5,18 @@
   display: flex;
   flex-direction: column;
   .output-head {
+    width: -webkit-fill-available;
     position: absolute;
     color: #ffffff;
     font-weight: 700;
     top: -28px;
+    display: flex;
+    justify-content: space-between;
+    padding-right: 10px;
+    &.center {
+      justify-content: center;
+      gap: 10px;
+    }
   }
   .output-section {
     background-color: #ffffff;
@@ -16,5 +24,12 @@
     height: -webkit-fill-available;
     border-radius: 3px;
     color: black;
+  }
+
+  &.full-width {
+    width: 98% !important;
+    height: 93% !important;
+    position: absolute;
+    top: 40px;
   }
 }

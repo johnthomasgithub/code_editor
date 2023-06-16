@@ -44,7 +44,7 @@ const Code = (props: Props) => {
   }, [])
   return (
     <>
-      <textarea id="lineCounter" wrap="off" readOnly>
+      <textarea id="lineCounter" className="text-area" wrap="off" readOnly>
         1.
       </textarea>
 

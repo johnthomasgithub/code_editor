@@ -36,14 +36,36 @@ iframe {
   background: #555;
 }
 
+.text-area {
+  resize: none;
+}
+
 .app-parent {
+  position: relative;
   height: 100%;
+
+  .loader-parent {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: 999;
+    &.blurry {
+      backdrop-filter: blur(6px);
+    }
+    .loader-gif {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      position: absolute;
+    }
+  }
 }
 
 .landing-parent {
   height: 100%;
   display: flex;
   flex-direction: column;
+  position: relative;
 }
 
 #lineCounter {
