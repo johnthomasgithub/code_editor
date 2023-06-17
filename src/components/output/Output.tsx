@@ -17,7 +17,13 @@ const Output = (props: Props) => {
   useEffect(() => {
     const script = document.createElement('script')
     script.innerHTML = props.js
-    document.body.appendChild(script)
+    document?.querySelector('.output-parent')?.appendChild(script)
+    const parentDiv: any = document.getElementsByClassName('output-parent')
+    const scriptTags: any = parentDiv[0]?.querySelectorAll('script')
+    const scriptTagsExceptLast = Array.from(scriptTags).slice(0, -1)
+    scriptTagsExceptLast.forEach(function (scriptTag: any) {
+      scriptTag.remove()
+    })
   }, [props.js])
 
   return (
