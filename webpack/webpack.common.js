@@ -6,6 +6,11 @@ module.exports = {
   resolve: {
     extensions: ['.tsx', '.ts', '.js'],
   },
+  devServer: {
+    historyApiFallback: {
+      index: '/build/index.html',
+    },
+  },
   module: {
     rules: [
       {
@@ -30,10 +35,6 @@ module.exports = {
         type: 'asset/inline',
       },
     ],
-  },
-  output: {
-    path: path.resolve(__dirname, '..', './build'),
-    filename: 'bundle.js',
   },
   plugins: [
     new HtmlWebpackPlugin({
