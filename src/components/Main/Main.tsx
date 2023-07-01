@@ -5,8 +5,9 @@ import { toggleLoader } from '../../Redux/Reducer/Reducers'
 import { HtmlLogo, CssLogo, JsLogo } from '../../utils/Icons'
 import Output from '../output/Output'
 import Code from '../Code/Code'
+import DeveloperConsole from '../Console/DeveloperConsole'
 const Main = () => {
-  const [htmlContainer, setHtmlContainer] = useState('')
+  const [htmlContainer, setHtmlContainer] = useState(``)
   const [cssContainer, setCssContainer] = useState('')
   const [jsContainer, setJsContainer] = useState('')
   const [selectedTab, setSelectedTab] = useState('HTML')
@@ -33,6 +34,9 @@ const Main = () => {
         tabs={tabs}
         setSelectedTab={setSelectedTab}
         selectedTab={selectedTab}
+        htmlContainer={htmlContainer}
+        cssContainer={cssContainer}
+        jsContainer={jsContainer}
       />
       <div className="main-content">
         {!minMax && (
@@ -55,6 +59,7 @@ const Main = () => {
           css={cssContainer}
           js={jsContainer}
         />
+        {/* <DeveloperConsole /> */}
       </div>
     </div>
   )

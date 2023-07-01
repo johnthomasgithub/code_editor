@@ -15,4 +15,17 @@
       background-color: #4e4e4e;
     }
   }
+
+  .download-code {
+    border-radius: 2px;
+    background-color: transparent;
+    color: #ffffff;
+    font-weight: 600;
+    border: 2px solid transparent;
+    &:hover {
+      background-color: #4e4e4e;
+      border-radius: 2px;
+      border-bottom: 5px solid #de257a;
+    }
+  }
 }
